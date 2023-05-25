@@ -1,0 +1,250 @@
+@font-face {
+    font-family: myFontBold;
+    src: url(fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: myFontThin;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+body {
+    font-family: myFontThin, serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(#7bd2ff, #91fcbf);
+}
+.container {
+    background-color: black;
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 5px #000000);
+}
+.container .control-section {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 95%;
+    height: 20%;
+    background-color: black;
+    display: flex;
+}
+.container .key-section {
+    width: 95%;
+    height: 65%;
+    background-color: black;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container .control-section div {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .control-section .title {
+    font-size: 2em;
+    font-family: myFontBold, serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33.33%;
+    height: 100%;
+}
+.container .control-section .title p {
+    margin-left: 0.5rem;
+}
+.container .control-section .volume-div {
+    font-size: 1.2em;
+}
+.container .control-section .volume-div input {
+    height: 3px;
+    margin-left: 20px;
+}
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 100%;
+    height: 55%;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.1s;
+}
+input:checked[type="checkbox"] {
+    background: #7da6ff;
+}
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+input:checked[type="checkbox"]::after {
+    left: 50%;
+}
+
+
+.check-box {
+    width: 18% !important;
+    height: 50% !important;
+    margin-left: 1rem;
+}
+.container .key-section .key-section-child {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.container .key-section .left {
+    width: 30%;
+}
+.container .key-section .mid {
+    width: 40%;
+}
+.container .key-section .right {
+    width: 30%;
+}
+.container .key-section .key-section-child .key {
+    cursor: pointer;
+    height: 98%;
+    border-radius: 10px;
+    background: linear-gradient(white, #E0E0E0);
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.1s;
+}
+
+.container .key-section .left .key {
+    width: 32%;
+}
+.container .key-section .mid .key{
+    width: 24%;
+}
+.container .key-section .right .key{
+    width: 32%;
+}
+.container .key-section .key-section-child .key span {
+    width: 100%;
+    height: 5%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    display: flex;
+    justify-content: center;
+}
+.container .key-section .key-section-child .key span:nth-child(1) {
+    height: 10%;
+    display: none;
+}
+.container .key-section .key-section-child .key span:nth-child(2) {
+    background: #CDCDCD;
+}
+
+span {
+    font-size: 1.3rem;
+}
+.black {
+    cursor: pointer;
+    position: absolute;
+    width: 18%;
+    height: 60%;
+    background: linear-gradient(#323232, black);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+}
+.black:active {
+    transition: 0.1s;
+    transform: scaleY(1.05) scaleX(1.02);
+}
+.black span {
+    height: 20%;
+    color: grey;
+    display: none;
+}
+
+.container .key-section .left .black-key1 {
+    left: 25%;
+}
+.container .key-section .left .black-key2 {
+    left: 57%;
+}
+
+.container .key-section .mid .black {
+    width: 14%;
+}
+
+.container .key-section .mid .black-key1 {
+    left: 18%;
+}
+.container .key-section .mid .black-key2 {
+    left: 43%;
+}
+.container .key-section .mid .black-key3 {
+    left: 68%;
+}
+
+.container .key-section .right .black-key1 {
+    left: 25%;
+}
+.container .key-section .right .black-key2 {
+    left: 57%;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+   .container {
+       width: 100%!important;
+       height: 40% !important;
+       transform: rotate(90deg);
+   }
+   .container .control-section {
+       border-radius: 10px;
+       width: 160%;
+       height: 50%;
+   }
+   .container .key-section {
+       width: 160%;
+       height: 100%;
+   }
+    .check-box {
+        width: 20%!important;
+        height: 35% !important;
+    }
+    .title {
+        font-size: 1.5rem!important;
+    }
+    .container .control-section .volume-div input {
+        width: 70%;
+    }
+}
